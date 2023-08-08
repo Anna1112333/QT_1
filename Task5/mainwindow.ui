@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lb_time">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>80</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Время</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="tb_time">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>110</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pb_ss">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>60</y>
+      <width>109</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Старт/стоп</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pb_clear">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>120</y>
+      <width>109</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Очистить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pb_round">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>210</y>
+      <width>109</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Круг</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pb_round</sender>
+   <signal>clicked()</signal>
+   <receiver>tb_time</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>532</x>
+     <y>231</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>283</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
