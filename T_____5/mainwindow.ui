@@ -97,7 +97,7 @@
      <rect>
       <x>90</x>
       <y>40</y>
-      <width>341</width>
+      <width>631</width>
       <height>81</height>
      </rect>
     </property>
@@ -115,16 +115,19 @@
      </rect>
     </property>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>37</height>
-    </rect>
-   </property>
+   <widget class="QPushButton" name="pb_t">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>490</y>
+      <width>109</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>тема</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
@@ -153,12 +156,12 @@
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>595</x>
-     <y>304</y>
+     <x>598</x>
+     <y>268</y>
     </hint>
     <hint type="destinationlabel">
      <x>344</x>
-     <y>295</y>
+     <y>268</y>
     </hint>
    </hints>
   </connection>
@@ -195,18 +198,34 @@
    </hints>
   </connection>
   <connection>
+   <sender>pb_ss</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>pb_clear</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>319</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>679</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>pb_clear</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>lb_time</receiver>
    <slot>update()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>585</x>
-     <y>312</y>
+     <x>584</x>
+     <y>262</y>
     </hint>
     <hint type="destinationlabel">
-     <x>432</x>
-     <y>122</y>
+     <x>418</x>
+     <y>107</y>
     </hint>
    </hints>
   </connection>
